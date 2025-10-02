@@ -1,0 +1,43 @@
+artifact_path: mlflow-artifacts:/924321585417839847/models/m-63fd12d9af1d4ee79acc7f5050b50f16/artifacts
+flavors:
+  python_function:
+    cloudpickle_version: 3.1.1
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.13.2
+    streamable: false
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-63fd12d9af1d4ee79acc7f5050b50f16
+model_size_bytes: 8298
+model_uuid: m-63fd12d9af1d4ee79acc7f5050b50f16
+prompts: null
+run_id: 7a6cf13251564d03b17c27fa344d2f32
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Temperature (C) - Min", "required": true},
+    {"type": "double", "name": "Temperature (C) - Max", "required": true}, {"type":
+    "double", "name": "Dissolved - Min", "required": true}, {"type": "double", "name":
+    "Dissolved - Max", "required": true}, {"type": "double", "name": "pH - Min", "required":
+    true}, {"type": "double", "name": "pH - Max", "required": true}, {"type": "double",
+    "name": "BOD (mg/L) - Min", "required": true}, {"type": "double", "name": "BOD
+    (mg/L) - Max", "required": true}, {"type": "double", "name": "NitrateN (mg/L)
+    - Min", "required": true}, {"type": "double", "name": "NitrateN (mg/L) - Max",
+    "required": true}, {"type": "double", "name": "Fecal Coliform (MPN/100ml) - Min",
+    "required": true}, {"type": "double", "name": "Fecal Coliform (MPN/100ml) - Max",
+    "required": true}, {"type": "double", "name": "Total Coliform (MPN/100ml) - Min",
+    "required": true}, {"type": "double", "name": "Total Coliform (MPN/100ml) - Max",
+    "required": true}, {"type": "double", "name": "Fecal - Min", "required": true},
+    {"type": "double", "name": "Fecal - Max", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-24 13:45:49.583568'

@@ -1,0 +1,43 @@
+artifact_path: file:///Users/cerdricdamais/Desktop/EPITA/MAJEUR/S9-SCIA/ML-OPS-2/part-2/mlruns/1/models/m-2921ebc15e314906b1177da1be22d7fb/artifacts
+flavors:
+  python_function:
+    cloudpickle_version: 3.1.1
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.13.7
+    streamable: false
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-2921ebc15e314906b1177da1be22d7fb
+model_size_bytes: 30480
+model_uuid: m-2921ebc15e314906b1177da1be22d7fb
+prompts: null
+run_id: f2c43b493516470c83164f4ebee23b00
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Temperature (C) - Min", "required": true},
+    {"type": "double", "name": "Temperature (C) - Max", "required": true}, {"type":
+    "double", "name": "Dissolved - Min", "required": true}, {"type": "double", "name":
+    "Dissolved - Max", "required": true}, {"type": "double", "name": "pH - Min", "required":
+    true}, {"type": "double", "name": "pH - Max", "required": true}, {"type": "double",
+    "name": "BOD (mg/L) - Min", "required": true}, {"type": "double", "name": "BOD
+    (mg/L) - Max", "required": true}, {"type": "double", "name": "NitrateN (mg/L)
+    - Min", "required": true}, {"type": "double", "name": "NitrateN (mg/L) - Max",
+    "required": true}, {"type": "double", "name": "Fecal Coliform (MPN/100ml) - Min",
+    "required": true}, {"type": "double", "name": "Fecal Coliform (MPN/100ml) - Max",
+    "required": true}, {"type": "double", "name": "Total Coliform (MPN/100ml) - Min",
+    "required": true}, {"type": "double", "name": "Total Coliform (MPN/100ml) - Max",
+    "required": true}, {"type": "double", "name": "Fecal - Min", "required": true},
+    {"type": "double", "name": "Fecal - Max", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-22 15:03:14.146843'

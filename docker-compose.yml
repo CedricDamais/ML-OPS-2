@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  mlflow_server:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: mlflow
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 8080
+      --backend-store-uri sqlite:////host_mlruns/mlflow.db
+      --default-artifact-root /Users/cerdricdamais/Desktop/EPITA/MAJEUR/S9-SCIA/ML-OPS-2/mlruns
+    volumes:
+      - ./mlruns:/host_mlruns
+    ports:
+      - "8080:8080"
+    
+  app:
+    build: ./part-2
+    container_name: app
+    depends_on:
+      - mlflow_server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./mlruns:/host_mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow_server:8080
+      - MLFLOW_ARTIFACT_URI=/host_mlruns
+
+  canary_app:
+    build: ./part-3
+    container_name: canary_app
+    depends_on:
+      - mlflow_server
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./mlruns:/host_mlruns
+      - ./mlruns:/Users/cerdricdamais/Desktop/EPITA/MAJEUR/S9-SCIA/ML-OPS-2/mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow_server:8080
+      - MLFLOW_ARTIFACT_URI=/host_mlruns

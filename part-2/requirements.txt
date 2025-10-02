@@ -1,0 +1,7 @@
+mlflow
+pandas
+scikit-learn
+flask
+gunicorn
+numpy
+pytest
